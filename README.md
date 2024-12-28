@@ -47,27 +47,52 @@ ShopEasy, an online retail business, is facing challenges with reduced customer 
 4. **MySQL Server**: Data was ingested from the MySQL database into Power BI for analysis.
 
 ### Steps
-1. **Data Collection**: Gathered customer reviews and social media comments.
-2. **Data Cleaning**: Processed and cleaned data using Python to ensure accuracy.
-3. **Sentiment Analysis**: Performed sentiment analysis on feedback to extract key themes and sentiments.
-4. **SQL Analysis**: Queried and analyzed data from MySQL Server to identify patterns and trends.
-5. **Visualization**: Created interactive dashboards in Power BI to visualize key metrics and insights.
+1. **Data Cleaning**: Processed and cleaned data using Python to ensure accuracy.
+2. **Sentiment Analysis**: Performed sentiment analysis on feedback to extract key themes and sentiments.
+3. **SQL Analysis**: Queried and analyzed data from MySQL Server to identify patterns and trends.
+4. **Visualization**: Created interactive dashboards in Power BI to visualize key metrics and insights.
+
+---
+
+## Datasets
+
+The project integrates six datasets that were merged and analyzed to provide comprehensive insights into marketing performance, customer engagement, and feedback.
+
+1. **customer_journey**: Contains data on customer interactions with the website and their journey through the sales funnel.
+2. **customer_reviews**: Raw customer review data collected from various sources, reflecting customer opinions on products and services.
+3. **customers**: Information about ShopEasy’s customers, including demographic details and purchase history.
+4. **customers_sentiment**: A preprocessed version of the `customer_reviews` dataset, where sentiment analysis was applied to extract sentiment scores and categorize reviews into positive, negative, or neutral.
+5. **engagement_data**: Data on customer engagement with various marketing campaigns, such as clicks, likes, comments, and social media interaction metrics.
+6. **geography**: Geographic information about customers, including locations, regions, and countries.
+7. **products**: Data about the products offered by ShopEasy, including product categories, descriptions, and prices.
+
+These datasets were merged and analyzed to provide a holistic view of customer behaviors, product performance, and marketing effectiveness.
+
+---
+
+## Project Structure
+
+- **queries/**: Contains all SQL queries related to data exploration and basic analysis.
+- **Analysis_report.pdf**: The detailed analysis report summarizing key insights and recommendations.
+- **data.sql**: Exported raw data along with its schema.
+- **marketing.pbix**: Power BI file containing visualizations and dashboards for data exploration and reporting.
+- **preprocessing.ipynb**: Jupyter notebook used for data preprocessing, including sentiment analysis of customer reviews.
 
 ---
 
 ## Results and Insights
 
-1. **Increased Conversion Rates**:
-   - Identified stages in the conversion funnel where drop-offs occurred.
-   - Recommended strategies to optimize these stages.
+1. **Decreased Conversion Rates**:
+   - **General Conversion Trend**: Conversion rates varied throughout the year, with peaks in February and July. There is potential to improve conversions during low-performing months, such as May, by revisiting marketing strategies or promotions.
+   - **Lowest Conversion Month**: May had the lowest conversion rate at 4.3%, with no products standing out significantly. This suggests that targeted interventions are needed during this period.
+   - **Highest Conversion Rates**: January recorded the highest conversion rate at 17.3%, driven by Ski Boots, which had a remarkable 100% conversion rate. This indicates seasonal demand and effective marketing strategies in January.
 
-2. **Enhanced Customer Engagement**:
-   - Analyzed interaction levels with various marketing content.
-   - Suggested content strategies to boost engagement.
+2. **Reduced Customer Engagement**:
+   - Overall social media engagement has declined, with views dropping throughout the year. However, the click-through rate stands at 19.56%, indicating that engaged users are still interacting effectively despite low interaction rates in terms of likes and comments.
 
-3. **Improved Customer Feedback Scores**:
-   - Extracted common themes from feedback to pinpoint customer needs and pain points.
-   - Proposed actionable improvements to address customer concerns.
+3. **Customer Feedback Analysis**:
+   - **Ratings Distribution**: The majority of customer reviews are positive, with 431 reviews at 4 stars and 409 at 5 stars. However, 1-2 star reviews still account for a smaller proportion, indicating areas for improvement.
+   - **Sentiment Analysis**: Positive sentiment dominates with 840 reviews, while negative sentiment is present in 226 reviews. The presence of mixed sentiments indicates opportunities to convert these experiences into more positive feedback.
 
 ---
 
@@ -85,10 +110,3 @@ This project successfully analyzed ShopEasy's marketing data to provide actionab
 
 ---
 
-```
-
-
-
-
-
-**Note**: This project is for demonstration purposes and showcases expertise in data analysis, visualization, and sentiment analysis to address business challenges.
